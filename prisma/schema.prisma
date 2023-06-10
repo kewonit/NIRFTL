@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+    provider     = "mysql"
+    url          = env("DATABASE_URL")
+    relationMode = "prisma"
+}
+
+model Product {
+    id                            Int       @id @default(autoincrement())
+    institute_id                  String
+    institute_name                String
+    year                          String
+    no_of_mean_package            String
+    college_tier                  String
+    graduating_in_stipulated_time String
+    placed_in_the_year            String
+    no_of_higher_edu              String
+    no_of_male_students           String
+    no_of_female_students         String
+    total_students                String
+    source_pdf                    String
+    previous_year                 String
+    second_to_last                String
+    previous_year_mean_package    String
+    second_to_last_mean_package   String
+    category                      Category? @relation(fields: [category_id], references: [id])
+    category_id                   Int
+
+    @@index([category_id])
+}
+
+model Category {
+    id          Int       @id @default(autoincrement())
+    name        String
+    description String
+    products    Product[]
+}
