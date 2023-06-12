@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
+  }
   :root {
     --background: 224 71% 4%;
     --foreground: 213 31% 91%;
