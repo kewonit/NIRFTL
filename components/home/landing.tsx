@@ -45,7 +45,7 @@ export default function Landing() {
             </p>
             <div className="mt-6 flex items-center justify-center gap-x-6">
             <Button asChild>
-              <a href="/selection">Get started</a>
+              <a href="/ranking/btech">BTECH</a>
             </Button>
               <a href="/faq" className="text-sm font-semibold leading-6 text-gray-200">
                 FAQ <span aria-hidden="true">→</span>

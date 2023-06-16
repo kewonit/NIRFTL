@@ -10,7 +10,7 @@ import {
 import  { NavigationMenuHeader }  from "@/components/home/header"
 
 // const {  institute_id, year, institute_name, no_of_mean_package, college_tier, graduating_in_stipulated_time, placed_in_the_year, source_pdf, no_of_higher_edu } = TableDemo;
-
+// test page
 
 import prisma from '../../../lib/prisma';
 

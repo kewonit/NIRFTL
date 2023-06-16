@@ -118,3 +118,5 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = "ListItem"
+
+export const runtime = 'edge';
