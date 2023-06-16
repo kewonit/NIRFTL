@@ -1,4 +1,5 @@
 import { ThumbsUp, Trees, Music } from 'lucide-react'
+import Image from 'next/image'
 const features = [
   {
     name: 'Trusted Source',
@@ -42,8 +43,8 @@ export default function Example() {
               </dl>
             </div>
           </div>
-          <img
-            src="https://cdn.discordapp.com/attachments/1114913999788707870/1118910704683057273/image.png"
+          <Image 
+            src="https://i.imgur.com/VWNtik7.png"
             alt="Product screenshot"
             className="z-10 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[74rem] md:-ml-4 lg:-ml-0"
             width={1720}

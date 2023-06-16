@@ -1,5 +1,6 @@
 /* eslint-disable */
 import * as React from "react"
+import Image from 'next/image'
 
 export default function Trustedby() {
     return (
@@ -9,9 +10,9 @@ export default function Trustedby() {
             Trusted by the student communities!
           </h2>
           <div className="mx-auto mt-10 grid max-w-lg items-center">
-            <img
+            <Image
               className="mx-auto col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              src="https://cdn.discordapp.com/attachments/989248635374039110/1119200710995759104/mht_cet.png"
+              src="https://i.imgur.com/NxFMmej.png"
               alt="r/mht_cet"
               width={158}
               height={48}
