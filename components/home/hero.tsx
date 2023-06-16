@@ -48,6 +48,7 @@ export default function Example() {
             className="z-10 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[74rem] md:-ml-4 lg:-ml-0"
             width={1720}
             height={749}
+            draggable="false"
           />
         </div>
       </div>
