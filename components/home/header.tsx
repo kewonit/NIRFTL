@@ -19,10 +19,9 @@ import { Star } from 'lucide-react'
 export function NavigationMenuHeader() {
   return (
       <>
+      <meta property="og:type" content="website" />
       <meta property="og:image" content="https://i.imgur.com/CSyItln.png" />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1024" />
-      <meta property="og:image:height" content="1024" />
       <NavigationMenu>
       <Avatar className="mx-auto pl-4 max-w-7xl flex flex-1 justify-items-start">
         <a className="pl-2 pt-1 text-xl font-sans font-bold" href="/"> NIRFTL </a>
