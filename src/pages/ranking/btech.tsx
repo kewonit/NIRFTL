@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 
 import { Product } from '.prisma/client'

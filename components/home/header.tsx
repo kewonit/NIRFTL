@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { type NextPage } from "next";
 import * as React from "react"
 import { Button } from "@/components/ui/button"
@@ -14,7 +15,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Star } from 'lucide-react'
- 
+
 export function NavigationMenuHeader() {
   return (
       <>

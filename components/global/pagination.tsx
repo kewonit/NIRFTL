@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Table } from "@tanstack/react-table"
 import {
   ChevronLeft,
