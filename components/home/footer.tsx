@@ -12,8 +12,9 @@ export default function footer() {
                         This website holds no responsibility for any damages, losses, or inconveniences arising from the use of its services.
                         </p>
                     </div>
+                    {/* Todo lol
                     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
-                        {/* Todo lol
+
                         <li>
                             <a className="text-gray-700 transition hover:text-gray-700/75" href="/tos/privacypolicy">
                                 Privacy Policy
@@ -24,8 +25,9 @@ export default function footer() {
                                 Terms & Services
                             </a>
                         </li>
-                        */}
+                        
                     </ul>
+                    */}
                 </div>
                 <div className="mt-4 border-t border-gray-700 py-4">
                     <p className="text-center text-xs/relaxed text-gray-500">

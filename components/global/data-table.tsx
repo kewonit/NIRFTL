@@ -81,7 +81,7 @@ export function DataTable<TData, TValue>({
           />
           <DataTableViewOptions table={table} />
         </div>
-        <div className=" mx-auto max-w-7xl  rounded-md border">
+        <div className="mx-auto max-w-7xl rounded-md border">
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
