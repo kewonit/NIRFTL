@@ -19,6 +19,10 @@ import { Star } from 'lucide-react'
 export function NavigationMenuHeader() {
   return (
       <>
+      <meta property="og:image" content="https://i.imgur.com/CSyItln.png" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="1024" />
       <NavigationMenu>
       <Avatar className="mx-auto pl-4 max-w-7xl flex flex-1 justify-items-start">
         <a className="pl-2 pt-1 text-xl font-sans font-bold" href="/"> NIRFTL </a>
@@ -47,11 +51,11 @@ export function NavigationMenuHeader() {
                 <ListItem href="/docs" title="Home">
                   Back to the home page
                 </ListItem>
-                <ListItem href="/docs/installation" title="Selection">
-                  Select the field you wanna look up the ranking for!
-                </ListItem>
                 <ListItem href="/faq" title="Faq">
                   Have questions? Find the solutions here
+                </ListItem>
+                <ListItem href="/" title="Selection">
+                  Select the field you wanna look up the ranking for! Coming Soon!
                 </ListItem>
               </ul>
             </NavigationMenuContent>

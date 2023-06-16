@@ -1,6 +1,6 @@
 /* eslint-disable */
 "use client"
-
+import Head from "next/head";
 import { Product } from '.prisma/client'
 import React, { useEffect, useState } from 'react';
 import { DataTable } from '@/components/global/data-table';
@@ -221,6 +221,11 @@ export default function DemoPage({ products }: { products: any[] }) {
 
   return (
     <>
+      <Head>
+        <title>Nirf Tierlist for BTECH Colleges</title>
+        <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <NavigationMenuHeader></NavigationMenuHeader>
     <div className="container mx-auto py-10">
       <DataTable columns={columns} data={data} />
