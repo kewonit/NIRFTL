@@ -1,5 +1,4 @@
 /* eslint-disable */
-import * as React from "react"
 import { PrismaClient } from '@prisma/client';
 
 let prisma: PrismaClient;
