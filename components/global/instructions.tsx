@@ -31,13 +31,13 @@ export default function Instructions() {
                     Tier
                 </td>
                 <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                    College tier are divided on the basis of mean package, these arn't officially given out my NIRF!
+                    College tier are divided on the basis of mean package, these arnt officially given out my NIRF!
                     <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
                         <li><p>{'>'}1,000,000 - Tier 1 </p></li>
                         <li><p>{'>'}500,000 - Tier 2 </p></li>
                         <li><p>under 500,000 - Tier 3 </p></li>
                     </ul>
-                    It's more of a joke, all other data sources are queried from NIRF, and way better/trustable indicator!
+                    Its more of a joke, all other data sources are queried from NIRF, and way better/trustable indicator!
                 </td>
                 </tr>
                 <tr className="m-0 border-t p-0 even:bg-muted">
