@@ -10,6 +10,7 @@ import { any } from 'zod';
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { DataTableColumnHeader } from "@/components/global/columnheader"
 import {
   DropdownMenu,
@@ -23,17 +24,7 @@ import {
 export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "institute_name",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Name
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: "Name",
     cell: ({ row }) => {
       const amount = String(row.getValue("institute_name"))
       const formatted = amount
@@ -51,16 +42,7 @@ export const columns: ColumnDef<Product>[] = [
       return  <div className="text-right">{formatted}</div>
     },
   },
-  {
-    accessorKey: "year",
-    header: "Year",
-    cell: ({ row }) => {
-      const amount = String(row.getValue("year"))
-      const formatted = amount
- 
-      return <div className="text-right w-14">{formatted}</div>
-    },
-  },
+
   {
     accessorKey: "no_of_mean_package",
     header: ({ column }) => {
@@ -204,7 +186,14 @@ export const columns: ColumnDef<Product>[] = [
       return  <div className="text-right pr-4">{formatted}</div>
     },
   },
-
+  {
+    accessorKey: "source_pdf",
+    cell: ({ row }) => {
+      const amount = String(row.getValue("source_pdf"))
+      const formatted = amount
+      return <Button variant="outline" asChild><Link href={formatted}>Source</Link></Button>
+    },
+  },  
 ]
 
 export default function DemoPage({ products }: { products: any[] }) {
