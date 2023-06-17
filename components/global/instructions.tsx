@@ -7,11 +7,11 @@ export default function Instructions() {
     <hr className="py-2"></hr>
     <div className="mx-auto max-w-7xl p-7">
         <h2 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-3xl  text-left">
-            Instructions
+            Information
         </h2>
         <p className="leading-7 [&:not(:first-child)]:mt-6">
             The Instruction Tab, provides a comprehensive list of abbreviations 
-            and their corresponding details for clear understanding.
+            and their corresponding details for clear understanding. Also, the data is for the year 2022.
         </p>
         <div className="my-6 w-full overflow-y-auto">
             <table className="w-full">
@@ -70,7 +70,6 @@ export default function Instructions() {
                 </td>
                 <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
                     The number of students to choose to persue Higer Education straight out of UG!
-                    <hr></hr>
                 </td>
                 </tr>
                 <tr className="m-0 border-t p-0 even:bg-muted">
