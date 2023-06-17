@@ -130,7 +130,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "source_pdf",
-    header: "Source",
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Source" />
+  ),
     cell: ({ row }) => {
       const amount = String(row.getValue("source_pdf"))
       const formatted = amount

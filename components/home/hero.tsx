@@ -44,7 +44,7 @@ export default function Example() {
             </div>
           </div>
           <Image 
-            src="https://i.imgur.com/VWNtik7.png"
+            src="https://i.imgur.com/oDXtnd8.png"
             alt="Table screenshot"
             className="z-10 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[74rem] md:-ml-4 lg:-ml-0"
             width={1720}
