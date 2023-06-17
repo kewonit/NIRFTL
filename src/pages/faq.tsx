@@ -23,13 +23,19 @@ const faq: NextPage = () => {
           <AccordionItem value="item-1">
             <AccordionTrigger>Where can I find the official source?</AccordionTrigger>
             <AccordionContent>
-              You can find it at : <a href="https://www.nirfindia.org/2023/Ranking.html" className="text-gray-750 transition hover:text-gray-600/75">https://www.nirfindia.org/2023/Ranking.html</a>
+              You can find it at : <a target="_blank" href="https://www.nirfindia.org/2023/Ranking.html" className="text-gray-750 transition hover:text-gray-600/75">https://www.nirfindia.org/2023/Ranking.html</a>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger>Where can I contact the creator?</AccordionTrigger>
             <AccordionContent>
-             @Discord meowww#1628 / @Twitter <a href="https://twitter.com/KewKartik" className="text-gray-750 transition hover:text-gray-600/75">KewKartik</a> 
+             @Discord meowww#1628 / @Twitter <a target="_blank" href="https://twitter.com/KewKartik" className="text-gray-750 transition hover:text-gray-600/75">KewKartik</a> 
+            </AccordionContent>
+          </AccordionItem>
+        <AccordionItem value="item-3">
+            <AccordionTrigger>Wrong Info / Missing college?</AccordionTrigger>
+            <AccordionContent>
+             <a target="_blank" href="https://www.reddit.com/user/kewkartik/comments/14c02tw/nirftl_thread/" className="text-gray-750 transition hover:text-gray-600/75">Leave a comment on this thread, would really appreciate your efforts for helping create better accessible data for students! Click here!</a> 
             </AccordionContent>
           </AccordionItem>
         </Accordion>
