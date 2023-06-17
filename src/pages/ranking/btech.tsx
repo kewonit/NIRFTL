@@ -6,12 +6,12 @@ import React, { useEffect, useState } from 'react';
 import { DataTable } from '@/components/global/data-table';
 import prisma from '../../../lib/prisma';
 import  { NavigationMenuHeader }  from "@/components/home/header"
-import { any } from 'zod';
 import { ColumnDef } from "@tanstack/react-table"
-import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { DataTableColumnHeader } from "@/components/global/columnheader"
+import Instructions  from "@/components/global/instructions"
+import Footer from "@/components/home/footer"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,6 +20,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { any } from 'zod';
+import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 
 export const columns: ColumnDef<Product>[] = [
   {
@@ -34,28 +36,16 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "college_tier",
-    header: "Tier",
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("college_tier"))
-      const formatted = amount
- 
-      return  <div className="text-right">{formatted}</div>
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Tier" />
+  ),
   },
 
   {
     accessorKey: "no_of_mean_package",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Mean
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+          <DataTableColumnHeader column={column} title="Mean" />
+    ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("no_of_mean_package"))
       const formatted = new Intl.NumberFormat("en-US", {
@@ -68,17 +58,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "no_of_male_students",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Male
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Male" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("no_of_male_students"))
       const formatted = amount
@@ -88,17 +70,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "no_of_female_students",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Female
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Female" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("no_of_female_students"))
       const formatted = amount
@@ -108,17 +82,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "total_students",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Total
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Total" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("total_students"))
       const formatted = amount
@@ -128,17 +94,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "graduating_in_stipulated_time",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Graduated
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Graduated" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("graduating_in_stipulated_time"))
       const formatted = amount
@@ -148,17 +106,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "placed_in_the_year",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Placed
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Placed" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("placed_in_the_year"))
       const formatted = amount
@@ -168,17 +118,9 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "no_of_higher_edu",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          HigherEdu
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="HigherEdu" />
+  ),
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("no_of_higher_edu"))
       const formatted = amount
@@ -188,6 +130,7 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "source_pdf",
+    header: "Source",
     cell: ({ row }) => {
       const amount = String(row.getValue("source_pdf"))
       const formatted = amount
@@ -210,15 +153,18 @@ export default function DemoPage({ products }: { products: any[] }) {
 
   return (
     <>
-      <Head>
-        <title>Nirf Tierlist for BTECH Colleges</title>
-        <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Head>
+      <title>Nirf Tierlist for BTECH (Engineering) Colleges</title>
+      <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
     <NavigationMenuHeader></NavigationMenuHeader>
     <div className="container mx-auto py-10">
       <DataTable columns={columns} data={data} />
     </div>
+    <Instructions></Instructions>
+    <hr></hr>
+    <Footer></Footer>
     </>
   );
 }
