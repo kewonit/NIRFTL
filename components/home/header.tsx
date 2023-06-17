@@ -47,7 +47,7 @@ export function NavigationMenuHeader() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Home">
+                <ListItem href="/" title="Home">
                   Back to the home page
                 </ListItem>
                 <ListItem href="/faq" title="Faq">
