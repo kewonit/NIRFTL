@@ -32,9 +32,9 @@ export default function footer() {
                 <div className="mt-4 border-t border-gray-700 py-4">
                     <p className="text-center text-xs/relaxed text-gray-500">
                         Created by
-                        <a href="https://twitter.com/KewKartik"  className="text-gray-750 transition hover:text-gray-600/75"> KewKartik </a>
+                        <a target="_blank" href="https://twitter.com/KewKartik"  className="text-gray-750 transition hover:text-gray-600/75"> KewKartik </a>
                         |
-                        <a href="https://github.com/KewKartik/NIRFTL"  className="text-gray-750 transition hover:text-gray-600/75"> github </a>
+                        <a target="_blank" href="https://github.com/KewKartik/NIRFTL"  className="text-gray-750 transition hover:text-gray-600/75"> github </a>
                     </p>
                 </div>
             </div>

@@ -31,7 +31,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = String(row.getValue("institute_name"))
       const formatted = amount
  
-      return  <div className="text-left">{formatted}</div>
+      return  <div className="text-left whitespace-nowrap">{formatted}</div>
     },
   },
   {
@@ -39,6 +39,12 @@ export const columns: ColumnDef<Product>[] = [
     header: ({ column }) =>  (
       <DataTableColumnHeader column={column} title="Tier" />
   ),
+  cell: ({ row }) => {
+    const amount = parseFloat(row.getValue("college_tier"))
+    const formatted = amount
+
+    return  <div className="text-center pr-4">{formatted}</div>
+  },
   },
 
   {
@@ -53,7 +59,7 @@ export const columns: ColumnDef<Product>[] = [
         currency: "INR",
       }).format(amount)
  
-      return  <div className="text-right font-medium">{formatted}</div>
+      return  <div className="text-left font-medium">{formatted}</div>
     },
   },
   {

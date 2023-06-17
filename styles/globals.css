@@ -49,3 +49,15 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d0d0d0;
+}
