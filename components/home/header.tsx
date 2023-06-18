@@ -79,7 +79,7 @@ export function NavigationMenuHeader() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/ranking/btech" title="BTech">
+                <ListItem href="/ranking/engineering/2022/btech" title="BTech">
                   Have a look at the BTech Engineering college rankings!
                 </ListItem>
                 <ListItem title="Research Institutions [Coming Soon] ">

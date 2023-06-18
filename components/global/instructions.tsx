@@ -10,7 +10,7 @@ export default function Instructions() {
             Information
         </h2>
         <p className="leading-7 [&:not(:first-child)]:mt-6">
-            The Instruction Tab, provides a comprehensive list of abbreviations 
+            The Information Tab, provides a comprehensive list of abbreviations 
             and their corresponding details for clear understanding. Also, the data is for the year 2022.
         </p>
         <div className="my-6 w-full overflow-y-auto">
