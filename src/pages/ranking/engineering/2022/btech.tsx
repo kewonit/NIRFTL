@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Product } from '.prisma/client'
 import React, { useEffect, useState } from 'react';
 import { DataTable } from '@/components/global/data-table';
-import prisma from '../../../lib/prisma';
+import prisma from '@/lib/prisma';
 import  { NavigationMenuHeader }  from "@/components/home/header"
 import { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
@@ -35,6 +35,18 @@ export const columns: ColumnDef<Product>[] = [
     },
   },
   {
+    accessorKey: "year",
+    header: ({ column }) =>  (
+      <DataTableColumnHeader column={column} title="Year" />
+  ),
+  cell: ({ row }) => {
+    const amount = String(row.getValue("year"))
+    const formatted = amount
+
+    return  <div className="text-center whitespace-nowrap pr-4">{formatted}</div>
+  },
+  },
+  {
     accessorKey: "college_tier",
     header: ({ column }) =>  (
       <DataTableColumnHeader column={column} title="Tier" />
@@ -46,7 +58,6 @@ export const columns: ColumnDef<Product>[] = [
     return  <div className="text-center pr-4">{formatted}</div>
   },
   },
-
   {
     accessorKey: "no_of_mean_package",
     header: ({ column }) =>  (
