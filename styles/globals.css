@@ -52,7 +52,7 @@
 
 ::-webkit-scrollbar {
   width: 2px;
-  height: 6px;
+  height: 2px;
 }
 ::-webkit-scrollbar-track {
   background-color: var(--primary);

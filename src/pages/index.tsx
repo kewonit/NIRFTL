@@ -12,7 +12,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Nirf Tierlist</title>
         <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicol.ico" />
       </Head>
       <NavigationMenuHeader></NavigationMenuHeader>
       <Landing></Landing>
