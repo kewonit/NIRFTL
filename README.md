@@ -1,28 +1,101 @@
-# Create T3 App
+# NIRF-Tierlist [NIRFTL]
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling. Basically the [T3 Stack](https://create.t3.gg/)
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Prerequisites
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- [Node.js](https://nodejs.org/en/download/)
+- [PlanetScale CLI](https://github.com/planetscale/cli)
+- Authenticate the CLI with the following command:
 
-## Learn More
+```sh
+pscale auth login
+```
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Set up the database
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Create a new database with the following command:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+```sh
+pscale database create <DATABASE_NAME>
+```
 
-## How do I deploy this?
+> A branch, `main`, was automatically created when you created your database, so you can use that for `BRANCH_NAME` in the steps below.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Set up the app
+
+Clone the repository.
+
+```sh
+git clone https://github.com/KewKartik/NIRFTL
+```
+
+Install the dependencies.
+
+```sh
+npm install
+```
+
+Next, you'll need to create a database username and password through the CLI to connect to your application. If you'd prefer to use the dashboard for this step, you can find those instructions in the [Connection Strings documentation](/concepts/connection-strings#creating-a-password) and then come back here to finish setup.
+
+First, create your `.env` file by renaming the `.env.example` file to `.env`:
+
+```sh
+mv .env.example .env
+```
+
+Next, using the PlanetScale CLI, create a new username and password for the branch of your database:
+
+```sh
+pscale password create <DATABASE_NAME> <BRANCH_NAME> <PASSWORD_NAME>
+```
+
+> The `PASSWORD_NAME` value represents the name of the username and password being generated. You can have multiple credentials for a branch, so this gives you a way to categorize them. To manage your passwords in the dashboard, go to your database overview page, click "Settings", and then click "Passwords".
+
+Take note of the values returned to you, as you won't be able to see this password again.
+
+```text
+Password production-password was successfully created.
+Please save the values below as they will not be shown again
+
+  NAME                  USERNAME       ACCESS HOST URL                     ROLE               PLAIN TEXT
+ --------------------- -------------- ----------------------------------- ------------------ -------------------------------------------------------
+  production-password   xxxxxxxxxxxxx   xxxxxx.us-east-2.psdb.cloud   Can Read & Write   pscale_pw_xxxxxxx
+```
+
+You'll use these properties to construct your connection string, which will be the value for `DATABASE_URL` in your `.env` file. Update the `DATABASE_URL` property with your connection string in the following format:
+
+```text
+mysql://<USERNAME>:<PLAIN_TEXT_PASSWORD>@<ACCESS_HOST_URL>/<DATABASE_NAME>?sslaccept=strict
+```
+
+Push the database schema to your PlanetScale database using Prisma.
+
+`npx prisma db push`
+
+Run the seed script to populate your database with `Product` and `Category` data.
+
+`npm run seed`
+
+## Run the App
+
+Run the app with following command:
+
+`npm run dev`
+
+Open your browser at [localhost:3000](localhost:3000) to see the running application.
+
+## Deploying
+
+After you've got your application running locally, it's time to deploy it. To do so, you'll need to promote your database branch (`main` by default) to be the production branch ([read the branching documentation for more information](https://planetscale.com/docs/concepts/branching)).
+
+```sh
+pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
+```
+
+Now that your branch has been promoted to production, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
+
+Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
