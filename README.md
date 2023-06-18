@@ -99,3 +99,41 @@ pscale branch promote <DATABASE_NAME> <BRANCH_NAME>
 Now that your branch has been promoted to production, you can either use the existing password you generated earlier for running locally or create a new password. Regardless, you'll need a password in the deployment steps below.
 
 Choose one of the following deploy buttons and make sure to update the `DATABASE_URL` variable during this setup process.
+
+## Deploying the webiste
+
+For example we can consider vercel as our hosting platform. ([We need to use a workaround to generate prisma at every devployment ](https://www.prisma.io/docs/guides/other/troubleshooting-orm/help-articles/vercel-caching-issue)).
+
+### A custom postinstall script
+
+Within the scripts section of your project's package.json file, if there is not already a script named postinstall, add one and add prisma generate to that script:
+
+```js
+{
+  ...
+  "scripts" {
+    "postinstall": "prisma generate"
+  }
+  ...
+}
+```
+
+### The application's build script in package.json
+
+Within the scripts section of your project's package.json file, within the build script, prepend prisma generate to the default vercel build command:
+
+```js
+{
+  ...
+  "scripts" {
+    "build": "prisma generate && <actual-build-command>"
+  }
+  ...
+}
+```
+
+Another way to do it is just add `npx prisma generate && next build`!
+
+## Also you can cache your site using cloudflare to avoid high bandwidth usage on vercel
+
+([With Proxy](https://vercel.com/guides/using-cloudflare-with-vercel)).

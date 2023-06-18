@@ -71,7 +71,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("no_of_male_students"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -83,7 +83,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("no_of_female_students"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -95,7 +95,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("total_students"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -107,7 +107,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("graduating_in_stipulated_time"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -119,7 +119,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("placed_in_the_year"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -131,7 +131,7 @@ export const columns: ColumnDef<Product>[] = [
       const amount = parseFloat(row.getValue("no_of_higher_edu"))
       const formatted = amount
  
-      return  <div className="text-right pr-4">{formatted}</div>
+      return  <div className="text-center pr-4">{formatted}</div>
     },
   },
   {
@@ -164,7 +164,7 @@ export default function DemoPage({ products }: { products: any[] }) {
     <Head>
       <title>Nirf Tierlist for BTECH (Engineering) Colleges</title>
       <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicol.ico" />
     </Head>
     <NavigationMenuHeader></NavigationMenuHeader>
     <div className="container mx-auto py-10">
