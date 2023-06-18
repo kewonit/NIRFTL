@@ -31,7 +31,7 @@ export default function Landing() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-200/10 hover:ring-gray-200/20">
               Join the discussion live. {' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              <a target='_blank' href="https://www.reddit.com/user/kewkartik/comments/14c02tw/nirftl_thread/" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Thread<span aria-hidden="true">&rarr;</span>
               </a>
