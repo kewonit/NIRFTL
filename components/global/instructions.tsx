@@ -42,10 +42,10 @@ export default function Instructions() {
                 </tr>
                 <tr className="m-0 border-t p-0 even:bg-muted">
                 <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                    Mean
+                    Median
                 </td>
                 <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                    Mean Package here is the total mean packages of all branches within UG for the year of 2021-22.
+                    Median Package here is the total median packages of all branches within UG for the year of 2021-22.
                 </td>
                 </tr>
                 <tr className="m-0 border-t p-0 even:bg-muted">
