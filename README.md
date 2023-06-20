@@ -1,6 +1,6 @@
 # NIRF-Tierlist [NIRFTL]
 
-This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) for styling. Basically the [T3 Stack](https://create.t3.gg/)
+This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.prisma.io/) to connect to a [PlanetScale](https://planetscale.com/) database and [Tailwind CSS](https://tailwindcss.com/) along [Shadcn/ui](https://ui.shadcn.com/) for styling. Basically the [T3 Stack](https://create.t3.gg/)
 
 ## Prerequisites
 
@@ -9,7 +9,8 @@ This is a [Next.js](https://nextjs.org/) project that uses [Prisma](https://www.
 - [Tailwind CSS](https://tailwindcss.com)
 - [Node.js](https://nodejs.org/en/download/)
 - [PlanetScale CLI](https://github.com/planetscale/cli)
-- Authenticate the CLI with the following command:
+
+## Authenticate the CLI with the following command:
 
 ```sh
 pscale auth login
