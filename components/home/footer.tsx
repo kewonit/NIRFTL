@@ -3,8 +3,9 @@ import Link from "next/link"
 export default function footer() {
     return (
         <footer className="bg-gray-950">
-            <div className="relative mx-auto max-w-7xl px-4 py-2 sm:px-4 lg:pt-8">
-                    <div className="lg:flex lg:items-end lg:justify-between">
+            <hr/>
+            <div className="relative">
+                    <div className="mx-auto max-w-7xl lg:flex lg:items-end lg:justify-between px-4 py-2 sm:px-4 lg:pt-8">
                         <div>
                             <div className="flex justify-center text-gray-250 pl-8 lg:justify-start">
                                 <a className="text-xl font-sans font-bold"> NIRFTL </a>
@@ -27,8 +28,9 @@ export default function footer() {
                             </li>
                         </ul>
                     </div>
-                <div className="mt-4 border-t border-gray-700 py-4">
-                    <p className="text-center text-xs/relaxed text-gray-500">
+                <div className="py-8">
+                  <hr/>
+                    <p className="mx-auto max-w-7xl text-center text-xs/relaxed text-gray-500 px-4 py-2 sm:px-4 lg:pt-8">
                         Created by
                         <a target="_blank" href="https://twitter.com/KewKartik"  className="text-gray-750 transition hover:text-gray-600/75"> KewKartik </a>
                         |

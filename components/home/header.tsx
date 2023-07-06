@@ -70,12 +70,11 @@ export function NavigationMenuHeader() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                
-                <ListItem href="/RTI/btech" title="RTI">
-                  RTIs of BTech Engineering colleges!
-                </ListItem>
                 <ListItem href="/ranking/engineering/2022/btech" title="BTech">
                   Have a look at the BTech Engineering college rankings!
+                </ListItem>
+                <ListItem href="/RTI/btech" title="RTI">
+                  RTIs of BTech Engineering colleges!
                 </ListItem>
               </ul>
             </NavigationMenuContent>
