@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { type NextPage } from "next";
 import Head from "next/head";
 import Hero from "@/components/home/hero"
@@ -13,9 +14,9 @@ const Home: NextPage = () => {
         <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
         <link rel="icon" href="/favicol.ico" />
       </Head>
-      <Landing></Landing>
-      <Hero></Hero>
-      <Trustedby></Trustedby>
+      <Landing/>
+      <Hero/>
+      <Trustedby/>
     </>
   );
 };

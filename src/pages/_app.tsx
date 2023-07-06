@@ -8,7 +8,6 @@ import Footer from "@/components/home/footer"
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return(
-    
   <>
   <Head>
     <meta charSet="utf-8" />
@@ -17,12 +16,12 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <meta property="og:image" content="https://i.imgur.com/CSyItln.png" />
     <meta property="og:image:type" content="image/png" />
   </Head>
-    <NextProgress height={200} options={{ showSpinner: false }} />
+    <NextProgress height={5} options={{ showSpinner: false }} />
     <NavigationMenuHeader />
       <Component {...pageProps} />
     <Footer />
   </>
   )
 };
-
+export const runtime = 'experimental-edge';
 export default MyApp;

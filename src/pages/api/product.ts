@@ -17,3 +17,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ msg: 'Method not allowed' });
   }
 }
+
+export const config = {
+  runtime: 'edge', // this is a pre-requisite
+  regions: ['bom1'], // only execute this function on iad1
+};
