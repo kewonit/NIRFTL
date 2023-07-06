@@ -5,13 +5,13 @@ import { Product } from '.prisma/client'
 import React, { useEffect, useState } from 'react';
 import { DataTable } from '@/components/global/data-table';
 import prisma from '@/lib/prisma';
-import  { NavigationMenuHeader }  from "@/components/home/header"
 import { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { DataTableColumnHeader } from "@/components/global/columnheader"
 import Instructions  from "@/components/global/instructions"
 import Footer from "@/components/home/footer"
+import _app from "@/src/pages/_app"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -177,7 +177,6 @@ export default function DemoPage({ products }: { products: any[] }) {
       <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
       <link rel="icon" href="/favicol.ico" />
     </Head>
-    <NavigationMenuHeader></NavigationMenuHeader>
     <div className="container mx-auto py-10">
       <DataTable columns={columns} data={data} />
     </div>

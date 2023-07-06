@@ -19,9 +19,6 @@ import { Star } from 'lucide-react'
 export function NavigationMenuHeader() {
   return (
       <>
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://i.imgur.com/CSyItln.png" />
-      <meta property="og:image:type" content="image/png" />
       <NavigationMenu>
       <Avatar className="mx-auto pl-4 max-w-7xl flex flex-1 justify-items-start">
         <a className="pl-2 pt-1 text-xl font-sans font-bold" href="/"> NIRFTL </a>
@@ -53,9 +50,6 @@ export function NavigationMenuHeader() {
                 <ListItem href="/faq" title="Faq">
                   Have questions? Find the solutions here
                 </ListItem>
-                <ListItem href="/" title="Selection">
-                  Select the field you wanna look up the ranking for! Coming Soon!
-                </ListItem>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -79,14 +73,11 @@ export function NavigationMenuHeader() {
                     </a>
                   </NavigationMenuLink>
                 </li>
+                <ListItem href="/RTI/btech" title="RTI">
+                  RTIs of BTech Engineering colleges!
+                </ListItem>
                 <ListItem href="/ranking/engineering/2022/btech" title="BTech">
                   Have a look at the BTech Engineering college rankings!
-                </ListItem>
-                <ListItem title="Research Institutions [Coming Soon] ">
-                  [Coming Soon] 
-                </ListItem>
-                <ListItem title="Medical [Coming Soon]">
-                  [Coming Soon]
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -121,6 +112,8 @@ const ListItem = React.forwardRef<
     </li>
   )
 })
+export default NavigationMenuHeader;
+
 ListItem.displayName = "ListItem"
 
 export const runtime = 'edge';

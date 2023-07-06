@@ -2,6 +2,7 @@
 /* eslint-disable */
 import { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '../../../lib/prisma';
+import _app from "@/src/pages/_app"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
