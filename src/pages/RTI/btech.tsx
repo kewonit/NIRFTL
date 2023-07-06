@@ -1,22 +1,19 @@
 /* eslint-disable */
 "use client"
 import Head from "next/head";
-import { Product } from '.prisma/client'
-import React, { useEffect, useState } from 'react';
-import { DataTable } from '@/components/global/data-table';
-import prisma from '@/lib/prisma';
-import Instructions  from "@/components/global/instructions"
 import _app from "@/src/pages/_app"
-import { columns }  from "@/components/datatable/rankingbtech2022"
-
-
+import { BTechRTI } from '.prisma/client'
+import React, { useEffect, useState } from 'react';
+import { DataTable } from '@/components/global/data-tableRTI';
+import prisma from '@/lib/prisma';
+import { columns }  from "@/components/datatable/rtibtech"
 
 export default function DemoPage({ products }: { products: any[] }) {
-  const [data, setData] = useState<Product[]>([]);
+  const [data, setData] = useState<BTechRTI[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await products as any;
+      const result = await products;
       setData(result);
     };
 
@@ -33,15 +30,13 @@ export default function DemoPage({ products }: { products: any[] }) {
     <div className="container mx-auto py-10">
       <DataTable columns={columns} data={data} />
     </div>
-    <Instructions/>
-    <hr/>
     </>
   );
 }
 
 
 export async function getServerSideProps(context: any) {
-  const data = await prisma.product.findMany({
+  const data = await prisma.bTechRTI.findMany({
     include: {
       category: true,
     },

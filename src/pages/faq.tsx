@@ -7,7 +7,7 @@ import {
     AccordionTrigger,
   } from "@/components/ui/accordion"
 import { type NextPage } from "next";
-import  { NavigationMenuHeader }  from "@/components/home/header"
+import _app from "@/src/pages/_app"
 
 const faq: NextPage = () => {
     return (
@@ -17,7 +17,6 @@ const faq: NextPage = () => {
       <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
       <link rel="icon" href="/favicol.ico" />
     </Head>
-    <NavigationMenuHeader></NavigationMenuHeader>
     <div className="mx-auto max-w-7xl px-4 py-10">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">

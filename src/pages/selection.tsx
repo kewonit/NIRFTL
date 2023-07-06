@@ -1,5 +1,7 @@
+/* eslint-disable */
 import { type NextPage } from "next";
 import * as React from "react"
+import _app from "@/src/pages/_app"
 
 const selection: NextPage = () => {
     return (

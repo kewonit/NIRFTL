@@ -2,8 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider        = "prisma-client-js"
-    previewFeatures = ["referentialIntegrity"]
+    provider = "prisma-client-js"
 }
 
 datasource db {
@@ -36,9 +35,28 @@ model Product {
     @@index([category_id])
 }
 
-model Category {
+model BTechRTI {
     id          Int       @id @default(autoincrement())
+    Institute   String
+    Years       String
+    Branch      String
+    Registered  String
+    Placed      String
+    Average     String
+    Median      String
+    Highest     String
+    Lowest      String
+    Source      String
+    category    Category? @relation(fields: [category_id], references: [id])
+    category_id Int
+
+    @@index([category_id])
+}
+
+model Category {
+    id          Int        @id @default(autoincrement())
     name        String
     description String
     products    Product[]
+    BTechRTI    BTechRTI[]
 }
