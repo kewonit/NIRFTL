@@ -47,7 +47,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
     {
       accessorKey: "Placed",
       header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Male" />
+        <DataTableColumnHeader column={column} title="Placed" />
     ),
       cell: ({ row }) => {
         const amount = parseFloat(row.getValue("Placed"))
@@ -57,54 +57,63 @@ export const columns: ColumnDef<BTechRTI>[] = [
       },
     },
     {
+      accessorKey: "Median",
+      header: ({ column }) =>  (
+        <DataTableColumnHeader column={column} title="Median" />
+    ),
+      cell: ({ row }) => {
+        const amount = parseFloat(row.getValue("Median"))
+        const formatted = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "INR",
+        }).format(amount)
+    
+        return  <div className="text-left font-medium">{formatted}</div>
+      },
+    },
+    {
       accessorKey: "Average",
       header: ({ column }) =>  (
           <DataTableColumnHeader column={column} title="Average" />
     ),
-    cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("Average"))
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "INR",
-      }).format(amount)
-  
-      return  <div className="text-left font-medium">{formatted}</div>
-    },
-    },
-    {
-      accessorKey: "Median",
-      header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Total" />
-    ),
       cell: ({ row }) => {
-        const amount = parseFloat(row.getValue("Median"))
-        const formatted = amount
-   
-        return  <div className="text-center pr-4">{formatted}</div>
-      },
-    },
-    {
-      accessorKey: "Highest",
-      header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Graduated" />
-    ),
-      cell: ({ row }) => {
-        const amount = parseFloat(row.getValue("Highest"))
-        const formatted = amount
-   
-        return  <div className="text-center pr-4">{formatted}</div>
+        const amount = parseFloat(row.getValue("Average"))
+        const formatted = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "INR",
+        }).format(amount)
+    
+        return  <div className="text-left font-medium">{formatted}</div>
       },
     },
     {
       accessorKey: "Lowest",
       header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Placed" />
+        <DataTableColumnHeader column={column} title="Lowest" />
     ),
       cell: ({ row }) => {
         const amount = parseFloat(row.getValue("Lowest"))
-        const formatted = amount
-   
-        return  <div className="text-center pr-4">{formatted}</div>
+        const formatted = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "INR",
+        }).format(amount)
+    
+        return  <div className="text-left font-medium">{formatted}</div>
+      },
+    },
+    {
+      accessorKey: "Highest",
+      header: ({ column }) =>  (
+        <DataTableColumnHeader column={column} title="Highest" />
+    ),
+      cell: ({ row }) => {
+        const amount = parseFloat(row.getValue("Highest"))
+        const formatted = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "INR",
+        }).format(amount)
+    
+        return  <div className="text-left font-medium">{formatted}</div>
       },
     },
     {

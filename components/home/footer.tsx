@@ -10,7 +10,7 @@ export default function footer() {
                             <div className="flex justify-center text-gray-250 lg:justify-start">
                                 <a className="text-xl font-sans font-bold"> NIRFTL </a>
                             </div>
-                            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+                            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left lg:pb-4">
                             It is strongly recommended to verify the information provided on this website with official sources to ensure its accuracy. 
                             This website holds no responsibility for any damages, losses, or inconveniences arising from the use of its services.
                             </p>

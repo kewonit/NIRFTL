@@ -74,7 +74,7 @@ export function NavigationMenuHeader() {
                   Have a look at the BTech Engineering college rankings!
                 </ListItem>
                 <ListItem href="/RTI/btech" title="RTI">
-                  RTIs of BTech Engineering colleges!
+                  RTI data of BTech Engineering colleges!
                 </ListItem>
               </ul>
             </NavigationMenuContent>
