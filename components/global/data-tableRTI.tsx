@@ -64,9 +64,6 @@ export function DataTable<TData, TValue>({
 
   return (
     <>  
-        <h1 className="mx-auto max-w-7xl scroll-m-20 text-xl font-bold tracking-tight lg:text-xl">
-        RTI data of Engineering Colleges
-        </h1>
         <div className="mx-auto max-w-7xl flex items-center py-4">
           <Input
             placeholder="Filter College Name"

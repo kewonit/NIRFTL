@@ -28,8 +28,15 @@ export default function DemoPage({ products }: { products: any[] }) {
       <link rel="icon" href="/favicol.ico" />
     </Head>
     <div className="container mx-auto py-10">
+      <h1 className="mx-auto max-w-7xl scroll-m-20 text-xl font-bold tracking-tight lg:text-xl">
+        RTI data of Engineering Colleges
+      </h1>
       <DataTable columns={columns} data={data} />
     </div>
+      <hr/>
+      <h3 className="mx-auto max-w-7xl py-10 px-4 text-center scroll-m-20 text-xl font-bold tracking-tight lg:text-xl">
+        Complete credits to <a className="transition hover:text-gray-600/75" href="https://www.reddit.com/user/OkNerve7447/">u/OkNerve7447</a>, for filing the RTIs
+      </h3>
     </>
   );
 }
