@@ -30,7 +30,19 @@ export const columns: ColumnDef<BTechRTI>[] = [
       const formatted = amount
   
       return  <div className="text-center whitespace-nowrap pr-4">{formatted}</div>
+    },   
     },
+    {
+      accessorKey: "Branch",
+      header: ({ column }) =>  (
+        <DataTableColumnHeader column={column} title="Branch" />
+    ),
+    cell: ({ row }) => {
+      const amount = String(row.getValue("Branch"))
+      const formatted = amount
+  
+      return  <div className="text-center whitespace-nowrap pr-4">{formatted}</div>
+    },   
     },
     {
       accessorKey: "Registered",
@@ -43,7 +55,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
      
           return  <div className="text-center pr-4">{formatted}</div>
         },
-      },
+    },
     {
       accessorKey: "Placed",
       header: ({ column }) =>  (
