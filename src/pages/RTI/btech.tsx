@@ -8,7 +8,7 @@ import { DataTable } from '@/components/global/data-tableRTI';
 import prisma from '@/lib/prisma';
 import { columns }  from "@/components/datatable/rtibtech"
 
-export default function DemoPage({ products }: { products: any[] }) {
+export default function BTECHRTI({ products }: { products: any[] }) {
   const [data, setData] = useState<BTechRTI[]>([]);
 
   useEffect(() => {
