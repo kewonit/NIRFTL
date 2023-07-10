@@ -23,5 +23,10 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   </>
   )
 };
-export const runtime = 'experimental-edge';
+
 export default MyApp;
+
+export const config = {
+  runtime: 'experimental-edge',
+  regions: ['bom1'], 
+};

@@ -23,7 +23,7 @@ export default function BTECHRTI({ products }: { products: any[] }) {
   return (
     <>
     <Head>
-      <title>Nirf Tierlist for BTECH (Engineering) Colleges</title>
+      <title>RTI data of BTECH (Engineering) Colleges</title>
       <meta name="description" content="Access a comprehensive repository of essential information to discern your ideal academic institution, conveniently consolidated in a singular location." />
       <link rel="icon" href="/favicol.ico" />
     </Head>
