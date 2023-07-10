@@ -19,6 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 export const config = {
-  runtime: 'edge', // this is a pre-requisite
-  regions: ['bom1'], // only execute this function on iad1
+  runtime: 'edge',
+  regions: ['bom1'], 
 };
