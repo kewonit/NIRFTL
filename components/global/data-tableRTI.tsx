@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/table"
 import { Input } from "@/components/ui/input"
 import { DataTableViewOptions } from "@/components/global/columntoggle"
-
+import { DataTableToolbar } from "@/components/global/data-table-toolbar"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -64,7 +64,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <>  
-        <div className="mx-auto max-w-7xl flex items-center py-4">
+        <div className="mx-auto max-w-7xl flex flex-wrap items-center py-4">
           <Input
             placeholder="Filter College Name"
             value={(table.getColumn("Institute")?.getFilterValue() as string) ?? ""}
@@ -73,6 +73,7 @@ export function DataTable<TData, TValue>({
             }
             className="max-w-sm"
           />
+          <DataTableToolbar table={table} />
           <DataTableViewOptions table={table} />
         </div>
         <div className="mx-auto max-w-7xl rounded-md border">

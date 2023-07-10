@@ -1,5 +1,4 @@
 const { Prisma } = require('@prisma/client');
-
 //data used to test and initialize the database
 
 const BTechRTI = [

@@ -11,7 +11,7 @@ import { columns }  from "@/components/datatable/rankingbtech2022"
 
 
 
-export default function DemoPage({ products }: { products: any[] }) {
+export default function BTECH({ products }: { products: any[] }) {
   const [data, setData] = useState<Product[]>([]);
 
   useEffect(() => {
