@@ -44,7 +44,7 @@ export const columns: ColumnDef<Product>[] = [
     {
       accessorKey: "no_of_mean_package",
       header: ({ column }) =>  (
-            <DataTableColumnHeader column={column} title="Median" />
+          <DataTableColumnHeader column={column} title="Median" />
       ),
       cell: ({ row }) => {
         const amount = parseFloat(row.getValue("no_of_mean_package"))
@@ -53,7 +53,7 @@ export const columns: ColumnDef<Product>[] = [
           currency: "INR",
         }).format(amount)
    
-        return  <div className="text-left font-medium">{formatted}</div>
+        return  <div className="text-center font-medium">{formatted}</div>
       },
     },
     {
