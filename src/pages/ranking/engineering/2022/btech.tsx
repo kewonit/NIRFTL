@@ -21,7 +21,8 @@ export default function BTECH({ products }: { products: any[] }) {
     };
 
     fetchData();
-  }, [products]);
+  },
+);
 
   return (
     <>
@@ -40,7 +41,7 @@ export default function BTECH({ products }: { products: any[] }) {
 }
 
 
-export async function getServerSideProps(context: any) {
+export async function getServerSideProps() {
   const data = await prisma.product.findMany({
     include: {
       category: true,

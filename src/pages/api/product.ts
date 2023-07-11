@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 /* eslint-disable */
 import { NextApiRequest, NextApiResponse } from 'next';
-import prisma from '../../../lib/prisma';
+import prisma from '@/lib/prisma';
 import _app from "@/src/pages/_app"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -1,13 +1,10 @@
 /* eslint-disable */
 import _app from "@/src/pages/_app"
 import { BTechRTI } from '.prisma/client'
-import React, { useEffect, useState } from 'react';
 import { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { DataTableColumnHeader } from "@/components/global/columnheader"
-
-
 
 export const columns: ColumnDef<BTechRTI>[] = [
     {
@@ -17,7 +14,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
         const amount = String(row.getValue("Institute"))
         const formatted = amount
    
-        return  <div className="text-left whitespace-nowrap">{formatted}</div>
+        return  <div className="text-center whitespace-nowrap">{formatted}</div>
       },
     },
     {
@@ -80,7 +77,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
           currency: "INR",
         }).format(amount)
     
-        return  <div className="text-left font-medium">{formatted}</div>
+        return  <div className="text-center font-medium">{formatted}</div>
       },
     },
     {
@@ -95,7 +92,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
           currency: "INR",
         }).format(amount)
     
-        return  <div className="text-left font-medium">{formatted}</div>
+        return  <div className="text-center font-medium">{formatted}</div>
       },
     },
     {
@@ -110,7 +107,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
           currency: "INR",
         }).format(amount)
     
-        return  <div className="text-left font-medium">{formatted}</div>
+        return  <div className="text-center font-medium">{formatted}</div>
       },
     },
     {
@@ -125,7 +122,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
           currency: "INR",
         }).format(amount)
     
-        return  <div className="text-left font-medium">{formatted}</div>
+        return  <div className="text-center font-medium">{formatted}</div>
       },
     },
     {
