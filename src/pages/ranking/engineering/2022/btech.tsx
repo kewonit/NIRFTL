@@ -24,7 +24,7 @@ export default function BTECH({ products }: { products: any[] }) {
   },
 );
 
-  return (
+return (
     <>
     <Head>
       <title>Nirf Tierlist for BTECH (Engineering) Colleges</title>
@@ -39,7 +39,6 @@ export default function BTECH({ products }: { products: any[] }) {
     </>
   );
 }
-
 
 export async function getServerSideProps() {
   const data = await prisma.product.findMany({
