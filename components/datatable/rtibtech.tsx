@@ -18,7 +18,7 @@ export const columns: ColumnDef<BTechRTI>[] = [
       },
     },
     {
-      accessorKey: "Years",
+      accessorKey: "Years", 
       header: ({ column }) =>  (
         <DataTableColumnHeader column={column} title="Year" />
     ),
@@ -26,18 +26,20 @@ export const columns: ColumnDef<BTechRTI>[] = [
       const amount = String(row.getValue("Years"))
       const Year = amount
   
-      return  <div>{Year}</div>
+      return  <div className="float-center">{Year}</div>
     },   
     },
     {
       accessorKey: "Source",
       header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Source" />
+        <div className="float-right">
+          <DataTableColumnHeader column={column} title="Source" />
+        </div>
     ),
       cell: ({ row }) => {
         const amount = String(row.getValue("Source"))
         const Source = amount
-        return <Button variant="outline" asChild><Link href={Source}>Source</Link></Button>
+        return <Button className="float-right" variant="outline" asChild><Link href={Source}>Source</Link></Button>
       },
     },  
   ]
