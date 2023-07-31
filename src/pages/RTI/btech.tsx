@@ -35,9 +35,12 @@ return (
         <DataTable columns={columns} data={data} />
     </div>
       <hr/>
-      <h3 className="mx-auto max-w-7xl py-10 px-4 text-center scroll-m-20 text-xl font-bold tracking-tight lg:text-xl">
-        Complete credits to <a className="transition hover:text-gray-600/75" href="https://www.reddit.com/user/OkNerve7447/">u/OkNerve7447</a>, for filing the RTIs
-      </h3>
+        <h1 className="mx-auto max-w-7xl pt-10 px-4 text-center scroll-m-20 text-2xl font-bold tracking-tight lg:text-2xl">Credits</h1>
+        <h3 className="mx-auto max-w-7xl pb-10 px-4 text-center scroll-m-20 text-xl font-bold tracking-tight lg:text-xl">
+          <a className="transition hover:text-gray-600/75" href="https://www.reddit.com/user/OkNerve7447/">u/OkNerve7447, </a>
+          <a className="transition hover:text-gray-600/75" href="https://www.quora.com/profile/Pritish-Poswal">Pritish Poswal </a>&
+          <a className="transition hover:text-gray-600/75" href="https://www.reddit.com/r/JEENEETards/comments/14d8bah/placement_stats_of_iits_nits_iiits_and_gftis/"> u/Snorlaxx </a>
+        </h3>
     </>
   );
 }
