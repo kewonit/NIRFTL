@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { Product } from '.prisma/client'
-import React, { useEffect, useState } from 'react';
 import { ColumnDef } from "@tanstack/react-table"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
