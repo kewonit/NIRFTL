@@ -17,6 +17,8 @@ export default function Trustedby() {
               width={158}
               height={48}
               draggable="false"
+              placeholder = "empty"
+              priority={false}
             />
           </div>
         </div>
