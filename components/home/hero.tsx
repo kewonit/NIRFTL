@@ -4,7 +4,7 @@ const features = [
   {
     name: 'Trusted Source',
     description:
-      'The data for the rankings has been meticulously extracted from the annual rankings provided by NIRF.',
+      'The data for the rankings has been meticulously extracted from the various sources.',
     icon: ThumbsUp,
   },
   {
@@ -49,6 +49,8 @@ export default function Example() {
             className="z-10 w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[74rem] md:-ml-4 lg:-ml-0"
             width={1368}
             height={666}
+            placeholder = "empty"
+            priority={false}
             draggable="false"
           />
         </div>

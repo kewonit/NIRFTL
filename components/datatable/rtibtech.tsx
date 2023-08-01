@@ -20,14 +20,16 @@ export const columns: ColumnDef<BTechRTI>[] = [
     {
       accessorKey: "Years", 
       header: ({ column }) =>  (
-        <DataTableColumnHeader column={column} title="Year" />
-    ),
-    cell: ({ row }) => {
-      const amount = String(row.getValue("Years"))
-      const Year = amount
-  
-      return  <div className="float-center">{Year}</div>
-    },   
+        <div className="float-right">
+          <DataTableColumnHeader column={column} title="Year" />
+        </div>
+      ),
+      cell: ({ row }) => {
+        const amount = String(row.getValue("Years"))
+        const Year = amount
+    
+        return  <div className="float-right">{Year}</div>
+      },   
     },
     {
       accessorKey: "Source",
