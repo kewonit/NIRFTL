@@ -30,16 +30,17 @@ export function DataTableFacetedFilter<TData, TValue>({
   const options = [
     { label: "2021-22", value: "2021-22" },
     { label: "2022-23", value: "2022-23" },
+    { label: "2021-23", value: "2021-23" },
   ];
 
-  const selectedValue: string = (column?.getFilterValue() as string) || "";
+  const selectedValue: string = (column?.getFilterValue() as string);
 
   return (
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="outline" size="sm" className="h-10 border">
           <PlusCircledIcon className="mr-2 h-4 w-4" />
-          {selectedValue !== "" ? selectedValue : "Select Year"}
+          {selectedValue ? selectedValue : "Select Year"}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0" align="start">
@@ -71,7 +72,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                 );
               })}
             </CommandGroup>
-            {selectedValue !== "" && (
+            {selectedValue !== "clear" && (
               <>
                 <CommandSeparator />
                 <CommandGroup>

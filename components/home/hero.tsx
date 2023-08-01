@@ -4,7 +4,7 @@ const features = [
   {
     name: 'Trusted Source',
     description:
-      'The data for the rankings has been meticulously extracted from the annual rankings provided by NIRF.',
+      'The data for the rankings has been meticulously extracted from the various sources.',
     icon: ThumbsUp,
   },
   {
